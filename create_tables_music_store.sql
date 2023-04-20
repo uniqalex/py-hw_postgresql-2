@@ -33,6 +33,7 @@ create table if not exists albums (
 
 create table if not exists song (
 	song_id 	SERIAL not null,
+	duration	int not null,
 	name 		varchar(60) not null,
 	genre_id 	int not null references genre(genre_id),
 	album_id 	int not null references album(album_id),
